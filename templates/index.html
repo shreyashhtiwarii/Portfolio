@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyash Tiwari | Data Analyst </title>
+    <meta name="description"
+        content="Portfolio of Shreyash Tiwari, an innovative Data Analyst specializing in creative web experiences.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Background Canvas for Three.js -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">ST<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true"
+                data-tilt-max-glare="0.2">
+                <p class="greeting">Hi, my name is</p>
+                <h1 class="name">Shreyash Tiwari</h1>
+                <h2 class="title">I build <span id="typewriter"></span></h2>
+                <p class="description">
+                    I'm a passionate Data Analyst focused on creating stunning, interactive, and highly performant web
+                    applications. Let's build something extraordinary.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="section-title gs_reveal">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content gs_reveal gs_reveal_fromLeft">
+                <div class="about-text glass-card">
+                    <p>
+                        Hello! I'm Shreyash, a analyst who enjoys creating things that live on the internet. My interest
+                        in web development started back when I decided to try editing custom Tumblr themes — turns out
+                        hacking together HTML & CSS taught me a lot about coding!
+                    </p>
+                    <p>
+                        Fast-forward to today, and I've had the privilege of working on various innovative projects,
+                        focusing on building accessible, inclusive products and digital experiences.
+                    </p>
+                    <p>
+                        When I'm not coding, I'm usually exploring new technologies, refining my design skills, or
+                        exploring the world of 3D animations.
+                    </p>
+                </div>
+                <div class="about-image glass-card gs_reveal gs_reveal_fromRight" data-tilt data-tilt-max="5"
+                    data-tilt-scale="1.05">
+                    <div class="image-placeholder">
+                        <span class="icon">🧑‍💻</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="section-title gs_reveal">
+                <h2>My Arsenal</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category glass-card gs_reveal gs_reveal_fromBottom">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3 & SASS</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>Three.js</li>
+                        <li>GSAP</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card gs_reveal gs_reveal_fromBottom" style="transition-delay: 0.2s">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass-card gs_reveal gs_reveal_fromBottom" style="transition-delay: 0.4s">
+                    <h3>Tools & DB</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>SQL (PostgreSQL, SQLite)</li>
+                        <li>MongoDB</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="section-title gs_reveal">
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card gs_reveal" data-tilt data-tilt-max="15" data-tilt-speed="400">
+                    <div class="project-content">
+                        <div class="project-type">Featured Project</div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-desc">A full-stack e-commerce solution with dynamic product rendering, user
+                            authentication, and secure checkout flow.</p>
+                        <ul class="project-tech">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-card gs_reveal" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    style="transition-delay: 0.2s">
+                    <div class="project-content">
+                        <div class="project-type">Featured Project</div>
+                        <h3 class="project-title">3D Data Visualizer</h3>
+                        <p class="project-desc">An interactive 3D application for visualizing complex datasets in a
+                            spatial environment using WebGL.</p>
+                        <ul class="project-tech">
+                            <li>Three.js</li>
+                            <li>JavaScript</li>
+                            <li>Flask</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card glass-card gs_reveal" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    style="transition-delay: 0.4s">
+                    <div class="project-content">
+                        <div class="project-type">Featured Project</div>
+                        <h3 class="project-title">Decentralized Voting System</h3>
+                        <p class="project-desc">A secure, transparent voting system utilizing blockchain concepts and
+                            face recognition for authentication.</p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>SQLite</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="section-title gs_reveal">
+                <h2>Get In Touch</h2>
+                <div class="line"></div>
+            </div>
+            <div class="contact-container glass-card gs_reveal">
+                <p class="contact-text">
+                    I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                    I'll try my best to get back to you!
+                </p>
+                <form id="contact-form" action="/contact" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Message" rows="5"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Say Hello <span class="spinner"
+                            style="display:none;"></span></button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed & Built with <span style="color: var(--accent);">❤</span> by Shreyash Tiwari</p>
+    </footer>
+
+    <!-- Libraries -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Vanilla-Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="{{ url_for('static', filename='js/three_scene.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
